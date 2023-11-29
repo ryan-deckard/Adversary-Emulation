@@ -1,6 +1,6 @@
 - `nc 192.168.50.220 4444`
-  `whoami`
-  `whoami /groups`
+- `whoami`
+- `whoami /groups`
   `Get-LocalUser`
   `Get-LocalUser -Name "username" | Select-Object \*`
   `Get-LocalGroup`
