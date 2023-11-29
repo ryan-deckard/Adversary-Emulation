@@ -14,11 +14,14 @@
 
 - `$command = "Get-LocalGroupMember Administrators"; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); powershell.exe -EncodedCommand $encodedCommand`
 
-- `$command = ""; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); powershell.exe -EncodedCommand $encodedCommand`
+- `$command = "Get-LocalGroupMember Administrators | Where-Object { $_.PrincipalSource -eq 'Local' } | Select-Object Name"; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); powershell.exe -EncodedCommand $encodedCommand`
 
 - `$command = ""; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); powershell.exe -EncodedCommand $encodedCommand`
 
 - `Get-LocalUser -Name "username" | Select-Object *`
+
+- `Get-LocalGroupMember Administrators | Where-Object { $_.PrincipalSource -eq 'Local' } | Select-Object Name
+`
 
 ## Get Installed Applications:
 
