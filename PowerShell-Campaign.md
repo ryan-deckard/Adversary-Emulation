@@ -1,4 +1,9 @@
+## Attempt Lateral Movement:
+
 - `nc 192.168.50.220 4444`
+
+## Local Account Enumeration:
+
 - `whoami`
 - `whoami /groups`
 - `Get-LocalUser`
@@ -10,7 +15,7 @@
 - `route print`
 - `netstat -ano`
 
-## Installed Applications:
+## Get Installed Applications:
 
 ### 32 Bit:
 
