@@ -4,12 +4,21 @@
 
 ## Local Account Enumeration:
 
-- `whoami`
-- `whoami /groups`
-- `Get-LocalUser`
-- `Get-LocalUser -Name "username" | Select-Object \*`
-- `Get-LocalGroup`
-- `Get-LocalGroupMember Administrators`
+- `$command = "whoami"; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); powershell.exe -EncodedCommand $encodedCommand`
+
+- `$command = "whoami /groups"; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); powershell.exe -EncodedCommand $encodedCommand`
+
+- `$command = "Get-LocalUser"; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); powershell.exe -EncodedCommand $encodedCommand`
+
+- `$command = "Get-LocalGroup"; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); powershell.exe -EncodedCommand $encodedCommand`
+
+- `$command = "Get-LocalGroupMember Administrators"; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); powershell.exe -EncodedCommand $encodedCommand`
+
+- `$command = ""; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); powershell.exe -EncodedCommand $encodedCommand`
+
+- `$command = ""; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); powershell.exe -EncodedCommand $encodedCommand`
+
+- `Get-LocalUser -Name "username" | Select-Object *`
 
 ## Get Installed Applications:
 
