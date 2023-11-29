@@ -18,10 +18,11 @@
 
 - `$command = ""; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); powershell.exe -EncodedCommand $encodedCommand`
 
+- `$folderPath = ".\Campaign"; if (-not (Test-Path -Path $folderPath)) { New-Item -ItemType Directory -Path $folderPath }; $command = 'Get-LocalGroupMember Administrators | Where-Object { $_.PrincipalSource -eq "Local" } | Select-Object Name'; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); powershell.exe -EncodedCommand $encodedCommand | Out-File -FilePath ".\Campaign\output.txt"`
+
 - `Get-LocalUser -Name "username" | Select-Object *`
 
-- `Get-LocalGroupMember Administrators | Where-Object { $_.PrincipalSource -eq 'Local' } | Select-Object Name
-`
+- `Get-LocalGroupMember Administrators | Where-Object { $_.PrincipalSource -eq 'Local' } | Select-Object Name`
 
 ## Get Installed Applications:
 
